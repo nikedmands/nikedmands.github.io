@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+
+body {
+  font: 20px Dongle;
+  color: #EEF0EB;
+  background-color: #EEF0EB;
+}
+
+.navbar .navbar-brand {
+  display: inline-block;
+  padding: 5px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+  display: flex;
+}
+
+.navbar-nav li a:hover {
+  color: #153243 !important;
+  font-size: 30px !important;
+}
+
+.navbar-brand img {
+  height: 55;
+  width: 55;
+  margin-right: 20px;
+  max-width: 50px;
+  max-height: 50px;
+  align-self: center !important;
+  margin-top: 22px !important;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #B4B8AB, #153243, rgba(0, 0, 0, 0));
+}
+
+/* stops the accordian having a blue hue around clicked headers */
+:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.footer {
+  color: inherit !important;
+}
+
+
+
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.featurette-heading {
+  font-size: 50px;
+}
+}
+
+@media (min-width: 62em) {
+.featurette-heading {
+  margin-top: 7rem;
+}
+
+  
