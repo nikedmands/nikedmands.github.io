@@ -2,6 +2,15 @@
  * Globals
  */
 
+ /* background */
+
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
 
 /* Custom default button */
 .btn-light,
@@ -47,3 +56,4 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
