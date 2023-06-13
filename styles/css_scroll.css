@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* general page rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+/* the text */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* make the text appear in a column format */
+    flex-direction: column;
+    /* each 'section' takes up a whole page */
+    min-height: 100vh;
+    background: #1f242d;
+    /* hide the extra window with when section hasn't animated */
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 90px;
+    color: #fff;
+}
+
+p {
+    font-size: 35px;
+    color: #0ef;
+    font-weight: 600;
+}
+
+/* all section animations */
+section .animate {
+    filter: blur(5px);
+    transition: 1s;
+}
+
+/* remove blur once animation is done */
+section.show-animate .animate {
+    filter: blur(0);
+}
+/* secion 1 starting animation style */
+.sec-1 .animate {
+    transform: translateX(-100%);
+}
+
+/* section 1 animation */
+.sec-1.show-animate .animate {
+    transform: translateX(0%);
+}
+
+/* section 2 p style */
+.sec-2 p {
+    color: #0f0;
+}
+
+/* secion 2 starting animation style */
+.sec-2 .animate {
+    transform: translateX(100%);
+}
+
+/* section 2 animation */
+.sec-2.show-animate .animate {
+    transform: translateX(0%);
+}
+
+/* section 3 p style */
+.sec-3 p {
+    color: #e0f;
+}
+
+/* secion 3 starting animation style */
+.sec-3 .animate {
+    transform: scale(.7);
+}
+
+/* section 3 animation */
+.sec-3.show-animate .animate {
+    transform: scale(1);
+}
+
+/* section 4 p style */
+.sec-4 p {
+    color: #ff0;
+}
+
+/* section 5 images */
+.sec-5 .images img {
+    max-width: 400px;
+    max-height: 250px;
+    /* add spacing between the images */
+    margin: 0 30px;
+    transform: translateX(-100%);
+    transition-delay: calc(.2s * var(--i));
+}
+
+/* section 5 animation */
+.sec-5.show-animate .animate {
+    transform: translateX(0%);
+}
