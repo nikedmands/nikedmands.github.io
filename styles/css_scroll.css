@@ -88,10 +88,20 @@ section.show-animate .animate {
     color: #ff0;
 }
 
+/* section 4 animation*/
+
+.sec-4 .animate {
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+.sec-4.show-animate .animate {
+    opacity: 1;
+}
+
 /* section 5 images */
 .sec-5 .images img {
     max-width: 400px;
-    max-height: 250px;
     /* add spacing between the images */
     margin: 0 30px;
     transform: translateX(-100%);
