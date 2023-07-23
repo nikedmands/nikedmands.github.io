@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Page 2{% endblock %}
+
+{% block content %}
+
+<body>
+    <!-- background image, vh and vw set size to window size -->
+    <div class="bg-image" style="background-image: url(/images/carousel/4.jpg); height: 100vh; width: 100vw">
+
+        <body class="d-flex h-100 text-center text-bg-dark">
+            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+                <header class="mb-auto">
+                    <div>
+                        <h3 class="float-md-start mb-0">BS&JS1</h3>
+                        <nav class="nav nav-masthead justify-content-center float-md-end">
+                            <a class="nav-link fw-bold py-1 px-0" href="/">HOME</a>
+                            <a class="nav-link fw-bold py-1 px-0" href="/about">About</a>
+                            <a class="nav-link fw-bold py-1 px-0" href="page1">Page 1</a>
+                            <a class="nav-link fw-bold py-1 px-0" href="#">Page 2</a>
+                        </nav>
+                    </div>
+                </header>
+
+                <!-- main body -->
+                <main class="px-3 my-auto" style="height: 70%;">
+                    <h1>Another Bootstrap & JavaScript Page</h1>
+                    <p class="lead">Just another example of a responsive webpage. A simple home page idea for a website?
+                    </p>
+                    <p class="lead">
+                        <a href="bootstrap_login.html" class="btn btn-lg btn-light fw-bold border-white bg-white">Login Page Idea</a>
+                    </p>
+                </main>
+
+                <!-- footer -->
+                <footer class="container-fluid bg-4" style="color: font-size: 13px;">
+                    <p style="text-align: center;">&copy; Nik 2023</p>
+                </footer>
+            </div>
+    </div>
+
+{% endblock %}

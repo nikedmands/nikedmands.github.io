@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+<section class="home">
+    <video class="video-slide active" src="/static/images/221017_02_Urban Football_4k_004_preview.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="/static/images/_import_616fd499cd4227.32354891_preview.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="/static/images/pexels_videos_992695 (1080p).mp4" autoplay muted loop></video>
+    <video class="video-slide" src="/static/images/production_id_5192157 (1080p).mp4" autoplay muted loop></video>
+    <div class="content active">
+        <h1>Meet.Play.<br><span>Enjoy</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi, quae aliquam eligendi nihil provident reiciendis sapiente maiores animi atque a labore officia unde, voluptatem numquam aspernatur qui repellat itaque. Delectus ipsum deleniti, exercitationem voluptates expedita odio mollitia consequatur temporibus debitis voluptatibus quod doloribus, aut eaque minus iste repellat esse.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Meet<br><span>New People</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi, quae aliquam eligendi nihil provident reiciendis sapiente maiores animi atque a labore officia unde, voluptatem numquam aspernatur qui repellat itaque. Delectus ipsum deleniti, exercitationem voluptates expedita odio mollitia consequatur temporibus debitis voluptatibus quod doloribus, aut eaque minus iste repellat esse.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Play<br><span>your favourite games</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi, quae aliquam eligendi nihil provident reiciendis sapiente maiores animi atque a labore officia unde, voluptatem numquam aspernatur qui repellat itaque. Delectus ipsum deleniti, exercitationem voluptates expedita odio mollitia consequatur temporibus debitis voluptatibus quod doloribus, aut eaque minus iste repellat esse.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Enjoy<br><span>your time</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi, quae aliquam eligendi nihil provident reiciendis sapiente maiores animi atque a labore officia unde, voluptatem numquam aspernatur qui repellat itaque. Delectus ipsum deleniti, exercitationem voluptates expedita odio mollitia consequatur temporibus debitis voluptatibus quod doloribus, aut eaque minus iste repellat esse.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="slider-navigation">
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    //javascript for responsive navigation
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+
+    // javascript for the video slider nav
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+       slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+            content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            sliderNav(i);
+        });
+    });
+</script>
+
+
+{% endblock %}
